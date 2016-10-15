@@ -1,0 +1,119 @@
+"=================
+"" general setting
+""================
+
+set number
+set mouse=a
+set autoindent
+set smartindent
+set shiftwidth=4
+
+set tabstop=4
+set expandtab
+set smarttab
+
+set hlsearch
+set incsearch
+
+syntax on
+
+"==============================================================================
+"vundle setting"
+"==============================================================================
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+Plugin 'taglist.vim'
+"Plugin 'SuperTab'
+"Plugin 'TagHighlight'
+"Plugin 'vimwiki'
+"Plugin 'winmanager'
+"Plugin 'bufexplorer.zip'
+Plugin 'The-NERD-tree'
+"Plugin 'matrix.vim--Yang'
+"Plugin 'FencView.vim'
+"Plugin 'bufkill.vim'
+"Plugin 'Conque-Shell'
+"Plugin 'Vimpress'
+"Plugin 'LaTeX-Suite-aka-Vim-LaTeX'
+"Plugin 'c.vim'
+"Plugin 'Grep.vim'
+"Plugin 'a.vim'
+"Plugin 'kshenoy/vim-signature'
+"Plugin 'autoload_cscope.vim'
+
+"Plugin 'kien/ctrlp.vim'
+"Plugin 'Lokaltog/vim-powerline'
+Plugin 'stephenmckinney/vim-solarized-powerline'
+Plugin 'altercation/vim-colors-solarized'
+"Plugin 'Lokaltog/vim-easymotion'
+"Plugin 'haya14busa/incsearch.vim'
+"Plugin 'haya14busa/incsearch-easymotion.vim'
+"Plugin 'haya14busa/incsearch-fuzzy.vim'
+
+
+"Plugin 'Valloric/YouCompleteMe'
+"Plugin 'javacomplete'
+"Plugin 'octol/vim-cpp-enhanced-highlight'
+"Plugin 'vim-scripts/TagHighlight'
+Plugin 'bling/vim-airline'
+"Plugin 'edkolev/promptline.vim'
+"Plugin 'edkolev/tmuxline.vim'
+"Plugin 'paranoida/vim-airlineish'
+"Plugin 'itchyny/lightline.vim'
+
+"Plugin 'FelikZ/ctrlp-py-matcher'
+
+Plugin 'scrooloose/syntastic'
+Plugin 'DoxygenToolkit.vim'
+"Plugin 'vim-scripts/YankRing.vim'
+"Plugin 'vim-scripts/AutoComplPop'
+Plugin 'vim-scripts/SyntaxComplete'
+Plugin 'Yggdroot/indentLine'
+Plugin 'Raimondi/delimitMate'
+"Plugin 'SirVer/ultisnips'
+"Plugin 'airblade/vim-rooter'
+"Plugin 'terryma/vim-expand-region'
+
+"Plugin 'lervag/vim-latex'
+
+"Plugin 'tpope/vim-fugitive'
+"Plugin 'mhinz/vim-signify'
+
+"Plugin 'craigemery/vim-autotag'
+
+"Plugin 'Rip-Rip/clang_complete'
+"Plugin 'Shougo/neocomplete.vim'
+
+"Plugin 'terryma/vim-multiple-cursors'
+"Plugin 'tomasr/molokai'
+"Plugin 'zenorocha/dracula-theme'
+
+"Plugin 'rking/ag.vim'
+
+
+call vundle#end()
+filetype plugin indent on
+
+"delimitMate
+let g:delimitMate_expand_cr=1
+"let g:delimitMate_expand_space=1
+
+"NERDTree 配置 
+let NERDTreeIgnore = ['\.pyc$', '\.o$']
+let g:NERDTree_title="[NERDTree]"  
+function! NERDTree_Start()  
+    exec 'NERDTree'  
+endfunction  
+function! NERDTree_IsValid()  
+    return 1  
+endfunction   
+
