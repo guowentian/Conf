@@ -1,3 +1,5 @@
+" config file taken from qingchao, used in epic clusters
+"
 " See: http://vimdoc.sourceforge.net/htmldoc/options.html for details
 
 " For multi-byte character support (CJK support, for example):
