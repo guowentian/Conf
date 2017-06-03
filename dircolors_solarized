@@ -1,3 +1,4 @@
+# copy this file to ~/.dircolor; for ubuntu less than 14.04 also need to include eval 'dircolors /path/to/dircolordb' in ~/.profile
 # Exact Solarized color theme for the color GNU ls utility.
 # Designed for dircolors (GNU coreutils) 5.97
 #
