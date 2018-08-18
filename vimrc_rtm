@@ -57,7 +57,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'taglist.vim'
-Plugin 'SuperTab'
+"Plugin 'SuperTab'
 "Plugin 'TagHighlight'
 "Plugin 'vimwiki'
 "Plugin 'winmanager'"Plugin 'bufexplorer.zip'
