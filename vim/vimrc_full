@@ -16,6 +16,8 @@ set smarttab
 set hlsearch
 set incsearch
 
+set backspace=indent,eol,start
+
 " <space> to fold and unfold
 set foldenable
 set foldmethod=indent
@@ -28,6 +30,18 @@ nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 " process *.cu *cuh files as cpp type
 au BufNewFile,BufRead *.cu set filetype=cpp
 au BufNewFile,BufRead *.cuh set filetype=cpp
+
+" window split and management
+"set winheight=30
+"set winminheight=5
+nnoremap <silent> <C-w>+ :exe "resize " . (winheight(0) * 4/3)<CR>
+nnoremap <silent> <C-w>- :exe "resize " . (winheight(0) * 3/4)<CR>
+nnoremap <silent> <C-w>> :exe "vertical resize " . (winwidth(0) * 4/3)<CR>
+nnoremap <silent> <C-w>< :exe "vertical resize " . (winwidth(0) * 3/4)<CR>
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 syntax on
 
@@ -130,15 +144,16 @@ Plugin 'craigemery/vim-autotag'
 "Plugin 'Shougo/neocomplete.vim'
 
 "Plugin 'terryma/vim-multiple-cursors'
-"Plugin 'tomasr/molokai'
-"Plugin 'zenorocha/dracula-theme'
 
 "Plugin 'rking/ag.vim'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'vim-scripts/cpp_doxygen'
 
 Plugin 'tomasiser/vim-code-dark'
-"Plugin 'vim-scripts/desert256.vim'
+Plugin 'vim-scripts/desert256.vim'
+Plugin 'zenorocha/dracula-theme'
+Plugin 'tomasr/molokai'
+Plugin 'patstockwell/vim-monokai-tasty'
 
 call vundle#end()
 filetype plugin indent on
@@ -180,11 +195,12 @@ else
 endif
 set t_Co=256
 let g:solarized_termcolors=256
-colorscheme solarized
+"colorscheme solarized
 "colorscheme codedark
 "colorscheme dracula
 "colorscheme molokai
 "colorscheme desert256
+colorscheme vim-monokai-tasty
 "let g:molokai_original = 0
 "let g:rehash256 = 0
 set laststatus=2
